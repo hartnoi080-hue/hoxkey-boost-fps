@@ -1,0 +1,176 @@
+{
+  "name": "hoxkey-boost-fps",
+  "displayName": "Hoxkey Boost FPS",
+  "description": "VSCode Extension for Windows Performance Optimization - Boost FPS, Low Input Lag, System Tweaks",
+  "version": "1.0.0",
+  "engines": {
+    "vscode": "^1.70.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:hoxkey.restorePoint",
+    "onCommand:hoxkey.deleteTempFiles",
+    "onCommand:hoxkey.windowsFPS",
+    "onCommand:hoxkey.gpuOptimize",
+    "onCommand:hoxkey.cpuOptimize",
+    "onCommand:hoxkey.priorityControl",
+    "onCommand:hoxkey.powerPlan",
+    "onCommand:hoxkey.lowInputLag",
+    "onCommand:hoxkey.powerRunTweaks",
+    "onCommand:hoxkey.appCleanerRam",
+    "onCommand:hoxkey.cortanaDisabler",
+    "onCommand:hoxkey.deviceManager",
+    "onCommand:hoxkey.servicesSet",
+    "onCommand:hoxkey.registryDisabler",
+    "onCommand:hoxkey.fivemVideos",
+    "onCommand:hoxkey.playbook",
+    "onCommand:hoxkey.hwIdLock",
+    "onCommand:hoxkey.tools",
+    "onCommand:hoxkey.history"
+  ],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "hoxkey.restorePoint",
+        "title": "Hoxkey: Create Restore Point",
+        "category": "Hoxkey Boost FPS"
+      },
+      {
+        "command": "hoxkey.deleteTempFiles",
+        "title": "Hoxkey: Delete Temp Files",
+        "category": "Hoxkey Boost FPS"
+      },
+      {
+        "command": "hoxkey.windowsFPS",
+        "title": "Hoxkey: Windows Set for FPS",
+        "category": "Hoxkey Boost FPS"
+      },
+      {
+        "command": "hoxkey.gpuOptimize",
+        "title": "Hoxkey: GPU Optimization (AMD/Nvidia)",
+        "category": "Hoxkey Boost FPS"
+      },
+      {
+        "command": "hoxkey.cpuOptimize",
+        "title": "Hoxkey: CPU Optimization (Intel/AMD)",
+        "category": "Hoxkey Boost FPS"
+      },
+      {
+        "command": "hoxkey.priorityControl",
+        "title": "Hoxkey: Priority Control",
+        "category": "Hoxkey Boost FPS"
+      },
+      {
+        "command": "hoxkey.powerPlan",
+        "title": "Hoxkey: Custom Power Plan",
+        "category": "Hoxkey Boost FPS"
+      },
+      {
+        "command": "hoxkey.lowInputLag",
+        "title": "Hoxkey: Low Input Lag",
+        "category": "Hoxkey Boost FPS"
+      },
+      {
+        "command": "hoxkey.powerRunTweaks",
+        "title": "Hoxkey: Power Run Tweaks",
+        "category": "Hoxkey Boost FPS"
+      },
+      {
+        "command": "hoxkey.appCleanerRam",
+        "title": "Hoxkey: App Cleaner RAM",
+        "category": "Hoxkey Boost FPS"
+      },
+      {
+        "command": "hoxkey.cortanaDisabler",
+        "title": "Hoxkey: Cortana Disabler",
+        "category": "Hoxkey Boost FPS"
+      },
+      {
+        "command": "hoxkey.deviceManager",
+        "title": "Hoxkey: Device Manager",
+        "category": "Hoxkey Boost FPS"
+      },
+      {
+        "command": "hoxkey.servicesSet",
+        "title": "Hoxkey: Services Set",
+        "category": "Hoxkey Boost FPS"
+      },
+      {
+        "command": "hoxkey.registryDisabler",
+        "title": "Hoxkey: Registry Disabler",
+        "category": "Hoxkey Boost FPS"
+      },
+      {
+        "command": "hoxkey.fivemVideos",
+        "title": "Hoxkey: FiveM Videos",
+        "category": "Hoxkey Boost FPS"
+      },
+      {
+        "command": "hoxkey.playbook",
+        "title": "Hoxkey: Free Playbook (Atlas/Revi)",
+        "category": "Hoxkey Boost FPS"
+      },
+      {
+        "command": "hoxkey.hwIdLock",
+        "title": "Hoxkey: HWID Lock",
+        "category": "Hoxkey Boost FPS"
+      },
+      {
+        "command": "hoxkey.tools",
+        "title": "Hoxkey: Tools",
+        "category": "Hoxkey Boost FPS"
+      },
+      {
+        "command": "hoxkey.history",
+        "title": "Hoxkey: History",
+        "category": "Hoxkey Boost FPS"
+      }
+    ],
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "hoxkey-explorer",
+          "title": "Hoxkey Boost FPS",
+          "icon": "resources/hoxkey-icon.svg"
+        }
+      ]
+    },
+    "views": {
+      "hoxkey-explorer": [
+        {
+          "id": "hoxkeyFeatures",
+          "name": "Features"
+        },
+        {
+          "id": "hoxkeyStatus",
+          "name": "Status"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.70.0",
+    "@types/glob": "^7.2.0",
+    "@types/node": "16.x",
+    "@typescript-eslint/eslint-plugin": "^5.31.0",
+    "@typescript-eslint/parser": "^5.31.0",
+    "eslint": "^8.20.0",
+    "glob": "^8.0.3",
+    "typescript": "^4.7.4",
+    "@vscode/test-electron": "^2.1.5"
+  },
+  "dependencies": {
+    "node-gyp": "^9.3.1"
+  }
+}
